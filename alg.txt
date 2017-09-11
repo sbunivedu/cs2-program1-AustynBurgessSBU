@@ -1,0 +1,21 @@
+if left paren 
+PUSH onto the stack.
+
+if right paren
+POP & write until matching left paren is popped/removed.
+
+if operator (+, -, *, /)
+PUSH onto the stack. Write space character.
+However, first remove any operators already on 
+the stack that have higher or equal precedence and write them out.
+
+if space
+ignore
+
+if operand (a..z,A..Z,0..9)/else
+Write out.
+
+
+
+when all characters have been read
+POP and write out until empty.
