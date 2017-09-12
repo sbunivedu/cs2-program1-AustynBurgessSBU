@@ -21,7 +21,6 @@ public class postfix {
                 out += current;//Assume every character that isn't a operator or space is an operand
 			}
 		}
-		System.out.println(stack.toString());
         while(!stack.isEmpty()){
             out += outOp(stack.pop());
         }
@@ -74,7 +73,7 @@ public class postfix {
         
         if(!stack.isEmpty()){
             char popped = stack.pop();
-            while (isGreaterOp(popped, in)){
+            while (isGreaterOp(popped, in) && !stack.isEmpty()){
                 out += outOp(popped);
                 popped = stack.pop();
             }
@@ -84,9 +83,6 @@ public class postfix {
         out += " ";
     }
 }
-
-
-
 
 
 
